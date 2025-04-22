@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poomsae Steps</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="list.js" type="application/javascript"></script>
+    <script src="levels.js" type="application/javascript"></script>
+    <script src="patterns/il_jang.js" type="application/javascript"></script>
+    <script src="patterns/yi_jang.js" type="application/javascript"></script>
+    <script src="patterns/sam_jang.js" type="application/javascript"></script>
+    <script src="patterns/sah_jang.js" type="application/javascript"></script>
+    <script src="patterns/oh_jang.js" type="application/javascript"></script>
+    <script src="patterns/yuk_jang.js" type="application/javascript"></script>
+    <script src="patterns/chil_jang.js" type="application/javascript"></script>
+    <script src="patterns/pal_jang.js" type="application/javascript"></script>
+    <script src="patterns/koryo.js" type="application/javascript"></script>
+    
+    
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <select id="LEVEL_SELECT" class="select_level">
+                <script>
+                    levels.forEach(level => {
+                        document.write(`<option value="${level.level}">
+                            ${level.name}
+                        </option>`);
+                    });
+                </script>
+            </select>
+        </div>
+        
+
+        <button id="START" class="start_button">
+            <h2>Test your knowledge</h2>
+        </button>
+
+        <div id="QUESTION"></div>
+        <div id="ANSWER"></div>
+    </div>
+
+
+    
+
+    <script src="script.js" type="application/javascript"></script>
+</body>
+</html>
