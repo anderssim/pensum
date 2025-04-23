@@ -8,8 +8,8 @@ var yi_jang = {
             "count": 1,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apseogi",
+                    "technique": "Arae makki"
                 }
             ]
         },
@@ -17,8 +17,8 @@ var yi_jang = {
             "count": 2,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apkubi",
+                    "technique": "Momtong bandae jureugi"
                 }
             ]
         },
@@ -26,8 +26,8 @@ var yi_jang = {
             "count": 3,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apseogi",
+                    "technique": "Arae makki"
                 }
             ]
         },
@@ -35,8 +35,8 @@ var yi_jang = {
             "count": 4,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apkubi",
+                    "technique": "Momtong bandae jireugi"
                 }
             ]
         },
@@ -44,8 +44,8 @@ var yi_jang = {
             "count": 5,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apseogi",
+                    "technique": "Momtong an makki"
                 }
             ]
         },
@@ -53,8 +53,8 @@ var yi_jang = {
             "count": 6,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun Apseogi",
+                    "technique": "Momtong an makki"
                 }
             ]
         },
@@ -62,8 +62,8 @@ var yi_jang = {
             "count": 7,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apseogi",
+                    "technique": "Arae makki"
                 }
             ]
         },
@@ -71,8 +71,8 @@ var yi_jang = {
             "count": 8,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apkubi",
+                    "technique": "Olgul bandae jireugi"
                 }
             ]
         },
@@ -80,8 +80,8 @@ var yi_jang = {
             "count": 9,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apseogi",
+                    "technique": "Arae makki"
                 }
             ]
         },
@@ -89,8 +89,8 @@ var yi_jang = {
             "count": 10, 
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apkubi",
+                    "technique": "Olgul bandae jireugi"
                 }
             ]
         },
@@ -98,8 +98,8 @@ var yi_jang = {
             "count": 11,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apseogi",
+                    "technique": "Olgul makki"
                 }
             ]
         },
@@ -107,8 +107,8 @@ var yi_jang = {
             "count": 12,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apseogi",
+                    "technique": "Olgul makki"
                 }
             ]
         },
@@ -116,8 +116,8 @@ var yi_jang = {
             "count": 13,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apseogi",
+                    "technique": "Momtong an makki"
                 }
             ]
         },
@@ -125,8 +125,8 @@ var yi_jang = {
             "count": 14,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apseogi",
+                    "technique": "Momtong an makki"
                 }
             ]
         },
@@ -134,8 +134,8 @@ var yi_jang = {
             "count": 15,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apseogi",
+                    "technique": "Arae makki"
                 }
             ]
         },
@@ -143,8 +143,8 @@ var yi_jang = {
             "count": 16,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apseogi",
+                    "technique": "Momtong bandae jireugi"
                 }
             ]
         },
@@ -152,8 +152,8 @@ var yi_jang = {
             "count": 17,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apseogi",
+                    "technique": "Momtong bandae jireugi"
                 }
             ]
         },
@@ -161,8 +161,8 @@ var yi_jang = {
             "count": 18,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apseogi",
+                    "technique": "Momtong bandae jireugi (Kihap!!!)" 
                 }
             ]
         }
