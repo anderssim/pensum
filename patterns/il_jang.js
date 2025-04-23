@@ -160,6 +160,15 @@ var il_jang = {
             "count": 17,
             "actions": [
                 {
+                    "stance": "Wen ap-kubi",
+                    "technique": "Arae-makki"
+                }
+            ]
+        },
+        {
+            "count": 18,
+            "actions": [
+                {
                     "stance": "Oreun ap-kubi",
                     "technique": "Bandae, momtong jireugi (Kihap!!!)"
                 }

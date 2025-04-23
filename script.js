@@ -1,8 +1,7 @@
 (() => {
         
     var start = document.getElementById("START");
-    console.log(list)
-    console.log(il_jang)
+    
     
     var patterns = {
         "il_jang": il_jang,
@@ -19,39 +18,45 @@
     var levelSelect = document.getElementById("LEVEL_SELECT");
     var question = document.getElementById("QUESTION");
     var answer = document.getElementById("ANSWER");
-    
     var difficulty = 1;
 
     
     start.addEventListener("click", () => {
         difficulty = levelSelect.options[levelSelect.selectedIndex].value;
-        console.log('difficulty', difficulty);
-
+        start.classList.add('hidden');
         reset();
         randomQuestion();
     })
 
-
     function reset() {
         question.innerHTML = "";
-        answer.innerHTML = "";   
+        answer.innerHTML = "";
     }
 
     function randomQuestion () {
         // var randomIndex = Math.floor(Math.random() * difficulty);
         var index = difficulty;
-        
         var pattern = patterns[list[index].key];
         var randomStepIndex = Math.floor(Math.random() * pattern.steps.length);
         var step = pattern.steps[randomStepIndex];
 
+        showQuestion(pattern, step);
+    }
+
+    function showQuestion(pattern, step) {
         question.innerHTML = /*html*/`
+        
         <div class="question">
-            <h3>${pattern.type} ${pattern.name}</h3>
-            <p>${pattern.description}</p>
-            <h3>Step: ${step.count} / ${pattern.steps.length}</h3>
-            <button id="SHOW_ANSWER">See the answer</button>
-        </div>`
+            ${pattern.type} <span class="countHighlight">${pattern.name}</span> har ${pattern.steps.length} tællinger.
+            <br>
+            <br>
+            Tælling ${step.count}  har ${step.actions.length} ${step.actions.length > 1 ? 'bevægelser' : 'bevægelse'}.
+            
+            Hvilken stand og ${step.actions.length > 1 ? 'teknikker' : 'teknik'} er der i den <span class="countHighlight">${step.count}</span> tælling?
+        </div>
+        <button id="SHOW_ANSWER" class="answer_btn">
+            Se svaret!    
+        </button>`
 
         var answerButton = document.getElementById("SHOW_ANSWER");
         answerButton.addEventListener("click", () => {
@@ -62,13 +67,15 @@
 
     function showAnswer(step) {
         answer.innerHTML = /*html*/`
+        
             <div class="answer">
+                
                 <table>
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Stance</th>
-                            <th>Technique</th>
+                            <th>Tælling</th>
+                            <th>Stand</th>
+                            <th>Teknik</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -81,6 +88,9 @@
                         `).join('')}
                     </tbody>
                 </table>
-            </div>`
+            </div>
+            <div class="breaker"></div>`
+
+        start.classList.remove('hidden');
     }
 })();
