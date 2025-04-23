@@ -15,18 +15,30 @@
         "koryo": koryo
     }
 
+    var radioButtons = document.querySelectorAll('input[name="difficulty"]');
     var levelSelect = document.getElementById("LEVEL_SELECT");
     var question = document.getElementById("QUESTION");
     var answer = document.getElementById("ANSWER");
-    var difficulty = 1;
+    var level = 1;
+    var difficulty = "easy";
 
     
     start.addEventListener("click", () => {
-        difficulty = levelSelect.options[levelSelect.selectedIndex].value;
+        level = levelSelect.options[levelSelect.selectedIndex].value;
+        difficulty =  document.querySelector('input[name="difficulty"]:checked').value;
         start.classList.add('hidden');
         reset();
         randomQuestion();
     })
+
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            if (event.target.checked) {
+                start.classList.remove('hidden');
+                reset();
+            }
+        });
+    });
 
     function reset() {
         question.innerHTML = "";
@@ -34,8 +46,13 @@
     }
 
     function randomQuestion () {
-        // var randomIndex = Math.floor(Math.random() * difficulty);
-        var index = difficulty;
+        var index = 0;        
+        if (difficulty == "easy") { 
+            index = level
+        } else if (difficulty == "hard") {
+            index = Math.floor(Math.random() * level);
+        }
+
         var pattern = patterns[list[index].key];
         var randomStepIndex = Math.floor(Math.random() * pattern.steps.length);
         var step = pattern.steps[randomStepIndex];
