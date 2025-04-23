@@ -46,15 +46,18 @@
     }
 
     function randomQuestion () {
-        var index = 0;        
+        var index = 0;   
+        console.log("difficulty: ", difficulty); 
+        console.log("level: ", level);    
         if (difficulty == "easy") { 
             index = level
         } else if (difficulty == "hard") {
-            index = Math.floor(Math.random() * level);
+            index = Math.round(Math.random() * level);
         }
 
+        console.log("index: ", index);
         var pattern = patterns[list[index].key];
-        var randomStepIndex = Math.floor(Math.random() * pattern.steps.length);
+        var randomStepIndex = Math.round(Math.random() * pattern.steps.length);
         var step = pattern.steps[randomStepIndex];
 
         showQuestion(pattern, step);
