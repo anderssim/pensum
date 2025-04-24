@@ -1,8 +1,14 @@
 var il_jang = {
-    "description": "Taegeuk Il Jang henvender sig til Keon-handlingen i Palgwe, som er princippet i de 64 Gwe'er i 'Book of Changes'.<br>Keon er det første af de otte trigrammer og symboliserer himlen, som er den første af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Il Jang er den første form i Taeguk-serien og er designet til at lære grundlæggende teknikker og bevægelser.<br><br>Keon Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi",
+    "description": "Taegeuk Il Jang henvender sig til Keon-handlingen i Palgwe, som er princippet i de 64 Gwe'er i 'Book of Changes'.<br>Keon er det første af de otte trigrammer og symboliserer himlen, som er den første af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Il Jang er den første form i Taegeuk-serien og er designet til at lære grundlæggende teknikker og bevægelser.<br><br>Keon Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi",
     "name": "Il Jang",
     "number": 1,
-    "type": "Taeguk",
+    "type": "Taegeuk",
+    "gwe": {
+        "name": "Geon",
+        "number": 1,
+        "emojii": "☰",
+        "description": "Geon er det første af de otte trigrammer og symboliserer himlen, som er den første af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Geon Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
+    },
     "steps": [
         {
             "count": 1,

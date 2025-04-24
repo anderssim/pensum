@@ -1,6 +1,5 @@
 (() => {
         
-    var start = document.getElementById("START");
     
     
     var patterns = {
@@ -14,13 +13,18 @@
         "pal_jang": pal_jang,
         "koryo": koryo
     }
-
+    
+    var start = document.getElementById("START");
     var radioButtons = document.querySelectorAll('input[name="difficulty"]');
     var levelSelect = document.getElementById("LEVEL_SELECT");
     var question = document.getElementById("QUESTION");
     var answer = document.getElementById("ANSWER");
     var level = 1;
     var difficulty = "easy";
+
+    levelSelect.innerHTML = list.map((item) => /*html*/`
+        <option value="${item.number}">${item.name}</option>
+    `).join('');
 
     
     start.addEventListener("click", () => {
@@ -70,9 +74,9 @@
             ${pattern.type} <span class="countHighlight">${pattern.name}</span> har ${pattern.steps.length} tællinger.
             <br>
             <br>
-            Tælling ${step.count}  har ${step.actions.length} ${step.actions.length > 1 ? 'bevægelser' : 'bevægelse'}.
+            Tælling ${step.count}  har ${step.actions.length} ${step.actions.length > 1 ? 'handlinger' : 'handling'}.
             
-            Hvilken stand og ${step.actions.length > 1 ? 'teknikker' : 'teknik'} er der i den <span class="countHighlight">${step.count}</span> tælling?
+            Hvilken stand og ${step.actions.length > 1 ? 'teknikker' : 'teknik'} er der i <span class="countHighlight">${step.count}</span> tælling?
         </div>
         <button id="SHOW_ANSWER" class="answer_btn">
             Se svaret!    

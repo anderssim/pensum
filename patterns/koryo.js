@@ -3,6 +3,12 @@ var koryo = {
     "name": "Koryo",
     "number": 9,
     "type": "Poomsae",
+    "gwe": {
+        "name": "",
+        "number": null,
+        "emojii": "",
+        "description": "",
+    },
     "steps": [
         {
             "count": 1,

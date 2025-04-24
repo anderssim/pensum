@@ -2,7 +2,13 @@ var sam_jang = {
     "description": "",
     "name": "Sam Jang",
     "number": 3,
-    "type": "Taeguk",
+    "type": "Taegeuk",
+    "gwe": {
+        "name": "Ri",
+        "number": 3,
+        "emojii": "☲",
+        "description": "Ri er det tredje af de otte trigrammer og symboliserer ild, som er det tredje af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Ri Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
+    },
     "steps": [
         {
             "count": 1,

@@ -2,7 +2,13 @@ var oh_jang = {
     "description": "",
     "name": "Oh Jang",
     "number": 5,
-    "type": "Taeguk",
+    "type": "Taegeuk",
+    "gwe": {
+        "name": "Gan",
+        "number": 5,
+        "emojii": "☶",
+        "description": "Gan er det femte af de otte trigrammer og symboliserer bjerg, som er det femte af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Gan Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
+    },
     "steps": [
         {
             "count": 1,

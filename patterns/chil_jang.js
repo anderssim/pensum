@@ -2,7 +2,13 @@ var chil_jang = {
     "description": "",
     "name": "Chil Jang",
     "number": 7,
-    "type": "Taeguk",
+    "type": "Taegeuk",
+    "gwe": {
+        "name": "Gon",
+        "number": 7,
+        "emojii": "☷",
+        "description": "Gon er det syvende af de otte trigrammer og symboliserer jorden, som er det syvende af de fire grundlæggende elementer. Det repræsenterer også det kvindelige princip og styrken i naturen. Gon Gwe er den bløde kvindelige Gwe som markerer den uendelige koncentration af Yin energi.",
+    },
     "steps": [
         {
             "count": 1,
