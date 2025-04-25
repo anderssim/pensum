@@ -13,7 +13,7 @@ var pal_jang = {
         "name": "Gon",
         "number": 8,
         "emojii": "☳",
-        "description": "Jin er det ottende af de otte trigrammer og symboliserer torden, som er det ottende af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Jin Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
+        "description": "Gon er det ottende af de otte trigrammer og symboliserer torden, som er det ottende af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Jin Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
     },
     "physicalTest": {
         "timeSeconds": 360,

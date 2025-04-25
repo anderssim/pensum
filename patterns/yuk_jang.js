@@ -13,7 +13,7 @@ var yuk_jang = {
         "name": "Gam",
         "number": 6,
         "emojii": "☴",
-        "description": "Son er det sjette af de otte trigrammer og symboliserer vind, som er det sjette af de fire grundlæggende elementer. Det repræsenterer også det kvindelige princip og styrken i naturen. Son Gwe er den bløde kvindelige Gwe som markerer den uendelige koncentration af Yin energi.",
+        "description": "Gam er det sjette af de otte trigrammer og symboliserer vind, som er det sjette af de fire grundlæggende elementer. Det repræsenterer også det kvindelige princip og styrken i naturen. Son Gwe er den bløde kvindelige Gwe som markerer den uendelige koncentration af Yin energi.",
     },
     "physicalTest": {
         "timeSeconds": 300,

@@ -13,7 +13,7 @@ var yi_jang = {
         "name": "Tae",
         "number": 2,
         "emojii": "☱",
-        "description": "Taek er det andet af de otte trigrammer og symboliserer jorden, som er den anden af de fire grundlæggende elementer. Det repræsenterer også det kvindelige princip og styrken i naturen. Taek Gwe er den bløde kvindelige Gwe som markerer den uendelige koncentration af Yin energi.",
+        "description": "Tae er det andet af de otte trigrammer og symboliserer jorden, som er den anden af de fire grundlæggende elementer. Det repræsenterer også det kvindelige princip og styrken i naturen. Taek Gwe er den bløde kvindelige Gwe som markerer den uendelige koncentration af Yin energi.",
     },
     "physicalTest": {
         "timeSeconds": 180,

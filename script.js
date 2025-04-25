@@ -58,9 +58,10 @@
 
                 <div class="flex-container">
                     ${renderGweButton(pattern)}
-                    <div style="width: 20%;">
+                    <div>
                         <button id="PHYSICAL_INFO" class="info_button">
-                            <div class="emojii" gwe-name="Fysik">🏋️‍♂️</div>
+                            <!-- <div class="emojii">🏋️‍♂️</div> -->
+                            🏋️‍♂️
                         </button>
                     </div>
                 </div>
@@ -72,9 +73,10 @@
     function renderGweButton (pattern) {
         if (pattern.number < 9) {
             return /*html*/`
-                <div style="width: 20%;">
+                <div>
                     <button id="GWE_INFO" class="info_button">
-                        <div class="emojii" gwe-name="Gwe">${pattern.gwe.emojii}</div>
+                        <!-- <div class="emojii">${pattern.gwe.emojii}</div> -->
+                        ${pattern.gwe.emojii}
                     </button>
                 </div>`
         }

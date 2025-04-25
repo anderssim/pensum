@@ -13,7 +13,7 @@ var chil_jang = {
         "name": "Gan",
         "number": 7,
         "emojii": "☷",
-        "description": "Gon er det syvende af de otte trigrammer og symboliserer jorden, som er det syvende af de fire grundlæggende elementer. Det repræsenterer også det kvindelige princip og styrken i naturen. Gon Gwe er den bløde kvindelige Gwe som markerer den uendelige koncentration af Yin energi.",
+        "description": "Gan er det syvende af de otte trigrammer og symboliserer jorden, som er det syvende af de fire grundlæggende elementer. Det repræsenterer også det kvindelige princip og styrken i naturen. Gon Gwe er den bløde kvindelige Gwe som markerer den uendelige koncentration af Yin energi.",
     },
     "physicalTest": {
         "timeSeconds": 330,

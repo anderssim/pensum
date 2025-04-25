@@ -227,6 +227,8 @@ p {
     text-align: center;
     background-color: transparent;
     cursor: pointer;
+    margin-right: 30px;
+    font-size: 1.3em;
 }
 
 .emojii {
@@ -369,7 +371,8 @@ p {
     width:  40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid #ccc;
+    border: none;
+    background-color: transparent;
     font-size: 1em;
     color: #525252;
     cursor: pointer;

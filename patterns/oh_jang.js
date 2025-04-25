@@ -13,7 +13,7 @@ var oh_jang = {
         "name": "Seon",
         "number": 5,
         "emojii": "☶",
-        "description": "Gan er det femte af de otte trigrammer og symboliserer bjerg, som er det femte af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Gan Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
+        "description": "Seon er det femte af de otte trigrammer og symboliserer bjerg, som er det femte af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Gan Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
     },
     "physicalTest": {
         "timeSeconds": 270,
