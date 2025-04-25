@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="list.js" type="application/javascript"></script>
     <script src="levels.js" type="application/javascript"></script>
+    <script src="pattern_template.js" type="application/javascript"></script>
     <script src="patterns/il_jang.js" type="application/javascript"></script>
     <script src="patterns/yi_jang.js" type="application/javascript"></script>
     <script src="patterns/sam_jang.js" type="application/javascript"></script>
@@ -26,31 +27,18 @@
 
         <div class="header">
             <img src="assets/islev-logo.png" alt="Logo" class="logo">
-            <h1 class="title">Islev Taekwondo Klub</h1>
+            <div>
+                <h3 class="title" >Islev Taekwondo Klub</h3>
+                <div class="sub_title">태 권 도</div>
+            </div>
         </div>
 
         <div>
             <select id="LEVEL_SELECT" class="select_level"></select>
-            
-            <div class="rules">
-
-                <div class="radio_button">
-                    <input type="radio" id="EASY" name="difficulty" value="easy" checked>
-                    <label for="EASY">Kun fra den valgte serie.</label>
-                </div>
-                <div class="radio_button">
-                    <input type="radio" id="HARD" name="difficulty" value="hard">
-                    <label for="HARD">Fra den valgte serie og ned.</label>
-                </div>
-            </div>
         </div>      
-
-        <div id="QUESTION"></div>
-        <div id="ANSWER"></div>
-
-        <button id="START" class="start_button">
-            Test din viden
-        </button>
+        <div id="MODAL" class="hidden"></div>
+        <div id="PENSUM_BOX"></div>
+        
     </div>
 
     <script src="script.js" type="application/javascript"></script>

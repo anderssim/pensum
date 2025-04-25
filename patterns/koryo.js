@@ -3,11 +3,25 @@ var koryo = {
     "name": "Koryo",
     "number": 9,
     "type": "Poomsae",
+    "degree": {
+        "from": 2,
+        "to": 1,
+        "prevColor": "Rødt bælte med 3 sorte striber",
+        "newColor": "Sort bælte",
+    },
     "gwe": {
         "name": "",
         "number": null,
         "emojii": "",
         "description": "",
+    },
+    "physicalTest": {
+        "timeSeconds": 390,
+        "actions": [
+            {"name": "Armstrækninger", "count": 70},
+            {"name": "Englehop", "count": 70},
+            {"name": "Mavebøjninger", "count": 70}
+        ]
     },
     "steps": [
         {

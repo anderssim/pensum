@@ -6,7 +6,7 @@ var levels = [
         "name": "Il Jang",
         "type": "Taegeuk",
         "level": "0",
-        "color": "white"
+        "pensum": "8. Kup - Taegeuk Il Jang",
     },
     {
         "degree": "8 kup",
@@ -14,7 +14,7 @@ var levels = [
         "name": "Yi Jang",
         "type": "Taegeuk",
         "level": "1",
-        "color": "yellow"
+        "pensum": "7. Kup - Taegeuk Yi Jang",
     },
     {
         "degree": "7 kup",
@@ -22,7 +22,7 @@ var levels = [
         "name": "Sam Jang",
         "type": "Taegeuk",
         "level": "2",
-        "color": "green"
+        "pensum": "6. Kup - Taegeuk Sam Jang",
     },
     {
         "degree": "6 kup",
@@ -30,7 +30,7 @@ var levels = [
         "name": "Sah Jang",
         "type": "Taegeuk",
         "level": "3",
-        "color": "blue_1"
+        "pensum": "5. Kup - Taegeuk Sah Jang",
     },
     {
         "degree": "5 kup",
@@ -38,7 +38,7 @@ var levels = [
         "name": "Oh Jang",
         "type": "Taegeuk",
         "level": "4",
-        "color": "blue_2"
+        "pensum": "4. Kup - Taegeuk Oh Jang",
     },
     {
         "degree": "4 kup",
@@ -46,7 +46,7 @@ var levels = [
         "name": "Yuk Jang",
         "type": "Taegeuk",
         "level": "5",
-        "color": "red_1"
+        "pensum": "3. Kup - Taegeuk Yuk Jang",
     },
     {
         "degree": "3 kup",
@@ -54,7 +54,7 @@ var levels = [
         "name": "Chil Jang",
         "type": "Taegeuk",
         "level": "6",
-        "color": "red_2"
+        "pensum": "2. Kup - Taegeuk Chil Jang",
     },
     {
         "degree": "2 kup",
@@ -62,7 +62,7 @@ var levels = [
         "name": "Pal Jang",
         "type": "Taegeuk",
         "level": "7",
-        "color": "red_3"
+        "pensum": "1. Kup - Taegeuk Pal Jang",
     },
     {
         "degree": "1 kup",
@@ -70,7 +70,7 @@ var levels = [
         "name": "Koryo",
         "type": "Poomsae",
         "level": "8",
-        "color": "black_1"
+        "pensum": "1. Dan - Koryo",
     },
     
 ]
