@@ -4,64 +4,73 @@ var levels = [
         "degree": "9 kup",
         "form": "il_jang",
         "name": "Il Jang",
-        "type": "Taeguk",
-        "level": "0"
+        "type": "Taegeuk",
+        "level": "0",
+        "pensum": "8. Kup - Taegeuk Il Jang",
     },
     {
         "degree": "8 kup",
         "form": "yi_jang",
         "name": "Yi Jang",
-        "type": "Taeguk",
-        "level": "1"
+        "type": "Taegeuk",
+        "level": "1",
+        "pensum": "7. Kup - Taegeuk Yi Jang",
     },
     {
         "degree": "7 kup",
         "form": "sam_jang",
         "name": "Sam Jang",
-        "type": "Taeguk",
-        "level": "2"
+        "type": "Taegeuk",
+        "level": "2",
+        "pensum": "6. Kup - Taegeuk Sam Jang",
     },
     {
         "degree": "6 kup",
         "form": "sah_jang",
         "name": "Sah Jang",
-        "type": "Taeguk",
-        "level": "3"
+        "type": "Taegeuk",
+        "level": "3",
+        "pensum": "5. Kup - Taegeuk Sah Jang",
     },
     {
         "degree": "5 kup",
         "form": "oh_jang",
         "name": "Oh Jang",
-        "type": "Taeguk",
-        "level": "4"
+        "type": "Taegeuk",
+        "level": "4",
+        "pensum": "4. Kup - Taegeuk Oh Jang",
     },
     {
         "degree": "4 kup",
         "form": "yuk_jang",
         "name": "Yuk Jang",
-        "type": "Taeguk",
-        "level": "5"
+        "type": "Taegeuk",
+        "level": "5",
+        "pensum": "3. Kup - Taegeuk Yuk Jang",
     },
     {
         "degree": "3 kup",
         "form": "chil_jang",
         "name": "Chil Jang",
-        "type": "Taeguk",
-        "level": "6"
+        "type": "Taegeuk",
+        "level": "6",
+        "pensum": "2. Kup - Taegeuk Chil Jang",
     },
     {
         "degree": "2 kup",
         "form": "pal_jang",
         "name": "Pal Jang",
-        "type": "Taeguk",
-        "level": "7"
+        "type": "Taegeuk",
+        "level": "7",
+        "pensum": "1. Kup - Taegeuk Pal Jang",
     },
     {
         "degree": "1 kup",
         "form": "koryo",
         "name": "Koryo",
         "type": "Poomsae",
-        "level": "8"
+        "level": "8",
+        "pensum": "1. Dan - Koryo",
     },
     
 ]

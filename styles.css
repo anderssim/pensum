@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #e7e7e7;
     color: #333;
     margin: 0;
     padding: 0;
@@ -23,7 +23,7 @@ table {
 
 table {
     border-radius: 4px;
-    
+
 }
 
 table, th, td {
@@ -38,12 +38,12 @@ th, td {
 th {
     background-color: #668db7;
     color: #fff;
-    font-weight: bold;
+    font-size: .8em;
+    font-weight: 500;
 }
 
 td {
-    background-color: #f2f2f2;
-
+    background-color: #fff;
 }
 
 
@@ -86,6 +86,31 @@ td {
     width: 100%;
 }
 
+.test_button {
+    background-color: #65b0ff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 50%;
+}
+
+.inner-content {
+    margin-top: 40px;
+}
+.li-space {
+    padding: 3px 0;
+}
+
+.primary-content {
+    margin: 20px 0;
+}
+
 p {
     font-size: .9em;
 }
@@ -102,7 +127,11 @@ p {
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f2f2f2;
-    
+    font-size: 1.2em;
+}
+
+.question-title {
+    margin: 15px 0 0 0;
 }
 
 .countHighlight {
@@ -113,26 +142,59 @@ p {
 }
 
 .answer_btn {
+    float: right;
     margin-top: 20px;
     width: 100%;
-    background-color: #28a745;
+    background-color: #5ebd75;
     color: #fff;
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 40%;
 }
 
-.answer {
-    margin: 40px 0 0 0;
+.answer_btn_2 {
+    float: right;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #65b0ff;
+    color: #fff;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 40%;
+}
+
+.odd {
+    background-color: #f2f2f2;
+}
+.even {
+    background-color: #fff;
+}
+
+.pensum-title {
+    margin: 10px 0;
 }
 
 .breaker {
     margin: 30px 20px;
     border-top: 1px solid #dedede;
+}
+
+.breaker_2 {
+    margin: 30px 0;
+    border-top: 1px solid #dedede;
+}
+.hint {
+    font-size: .9em;
 }
 
 .logo {
@@ -146,44 +208,88 @@ p {
     margin-bottom: 20px;
 }
 .title {
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-weight: 300;
     text-transform: uppercase;
+    margin: 0 0 0 20px;
+}
+.sub_title{
+    margin-left: 20px;
+    font-size: 1.5em;
+    letter-spacing: 5px;
 }
 
-/* .radio_button {
+.info_button {
+    width: 40px; 
+    height:40px; 
+    border: 1px solid #ccc; 
+    border-radius: 50%; 
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.emojii {
+    position: relative;
+    font-size: 2em;
+    line-height: -1px;
+}
+
+.emojii::after {
+    content: attr(gwe-name);
+    position: absolute;
+    left: 40px;
+    font-size: 80%;
+    top: 5px;
+}
+
+.flex-container {
     display: flex;
+}
+
+.modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
-    font-size: 1.0em;
+    z-index: 9999;
 }
 
-.radio_button input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    outline: none;
+.modal_content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    z-index: 10000;
+}
+
+.gwe_info {
+    text-align: center;
+    font-size: 10em;
+    margin: 0;
+}
+
+.close_btn {
+    font-size: 1.5em;
+    color: #333;
     cursor: pointer;
-    margin-right: 10px;
-    transition: background-color 0.3s, border-color 0.3s;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-.radio_button input[type="radio"]:checked {
-    background-color: #668db7;
-    
-}
 
-.radio_button input[type="radio"]:focus {
-    box-shadow: 0 0 0 3px rgba(102, 141, 183, 0.3);
-}
 
-.radio_button label {
-    cursor: pointer;
-} */
 
 .radio_button {
     margin: 10px 0;
@@ -233,4 +339,47 @@ p {
 
 .rules {
     margin: 20px 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.big-arrow-down{
+    text-align: center;
+    font-size: 2em;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: #ccc;
+}
+
+
+
+.relative {
+    position: relative;
+}
+
+.nav-container {
+    padding: 20px 20px 0 20px;
+}
+
+.page_btn {
+    width:  40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    color: #525252;
+    cursor: pointer;
+}
+
+.prev_btn {
+    float: left;
+}
+
+.next_btn {
+    rotate: 180deg;
+    float: right;
 }

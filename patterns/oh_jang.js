@@ -2,14 +2,34 @@ var oh_jang = {
     "description": "",
     "name": "Oh Jang",
     "number": 5,
-    "type": "Taeguk",
+    "type": "Taegeuk",
+    "degree": {
+        "from": 6,
+        "to": 5,
+        "prevColor": "Blåt bælte med rød stribe",
+        "newColor": "Rødt bælte",
+    },
+    "gwe": {
+        "name": "Seon",
+        "number": 5,
+        "emojii": "☶",
+        "description": "Gan er det femte af de otte trigrammer og symboliserer bjerg, som er det femte af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Gan Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
+    },
+    "physicalTest": {
+        "timeSeconds": 270,
+        "actions": [
+            {"name": "Armstrækninger", "count": 45},
+            {"name": "Englehop", "count": 45},
+            {"name": "Mavebøjninger", "count": 45}
+        ]
+    },
     "steps": [
         {
             "count": 1,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apkubi",
+                    "technique": "Arae makki"
                 }
             ]
         },
@@ -17,8 +37,8 @@ var oh_jang = {
             "count": 2,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen seogi",
+                    "technique": "Me jumeok naeryo chigi"
                 }
             ]
         },
@@ -26,8 +46,8 @@ var oh_jang = {
             "count": 3,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apkubi",
+                    "technique": "Arae makki"
                 }
             ]
         },
@@ -35,8 +55,8 @@ var oh_jang = {
             "count": 4,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun seogi",
+                    "technique": "Me jumeok naeryo chigi"
                 }
             ]
         },
@@ -44,8 +64,8 @@ var oh_jang = {
             "count": 5,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apkubi",
+                    "technique": "Dubeon momtong an makki"
                 }
             ]
         },
@@ -54,7 +74,15 @@ var oh_jang = {
             "actions": [
                 {
                     "stance": "",
-                    "technique": ""
+                    "technique": "Ap chagi"
+                },
+                {
+                    "stance": "Oreun apkubi",
+                    "technique": "Oreun deungjumeok olgul ap chigi"
+                },
+                {
+                    "stance": "-||-",
+                    "technique": "Momtong an makki"
                 }
             ]
         },
@@ -63,7 +91,15 @@ var oh_jang = {
             "actions": [
                 {
                     "stance": "",
-                    "technique": ""
+                    "technique": "Ap chagi"
+                },
+                {
+                    "stance": "Wen apkubi",
+                    "technique": "Wen deungjumeok olgul ap chigi"
+                },
+                {
+                    "stance": "-||-",
+                    "technique": "Momtong an makki"
                 }
             ]
         },
@@ -71,8 +107,8 @@ var oh_jang = {
             "count": 8,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apkubi",
+                    "technique": "Oreun deungjumeok olgul ap chigi"
                 }
             ]
         },
@@ -80,8 +116,8 @@ var oh_jang = {
             "count": 9,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun dwitkubi",
+                    "technique": "Wen hansonnal bakkatmakki"
                 }
             ]
         },
@@ -89,8 +125,8 @@ var oh_jang = {
             "count": 10, 
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apkubi",
+                    "technique": "Oreun palkup dollyochigi"
                 }
             ]
         },
@@ -98,8 +134,8 @@ var oh_jang = {
             "count": 11,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen dwitkubi",
+                    "technique": "Oreun hansonnal bakkatmakki"
                 }
             ]
         },
@@ -107,8 +143,8 @@ var oh_jang = {
             "count": 12,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apkubi",
+                    "technique": "Wen palkup dollyochigi"
                 }
             ]
         },
@@ -116,8 +152,12 @@ var oh_jang = {
             "count": 13,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apkubi",
+                    "technique": "Arae makki"
+                },
+                {
+                    "stance": "-||-",
+                    "technique": "Momtong an makki"
                 }
             ]
         },
@@ -126,7 +166,15 @@ var oh_jang = {
             "actions": [
                 {
                     "stance": "",
-                    "technique": ""
+                    "technique": "Ap chagi"
+                },
+                {
+                    "stance": "Oreun apkubi",
+                    "technique": "Arae makki"
+                },
+                {
+                    "stance": "-||-",
+                    "technique": "Momtong an makki"
                 }
             ]
         },
@@ -134,8 +182,8 @@ var oh_jang = {
             "count": 15,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apkubi",
+                    "technique": "Olgul makki"
                 }
             ]
         },
@@ -144,7 +192,11 @@ var oh_jang = {
             "actions": [
                 {
                     "stance": "",
-                    "technique": ""
+                    "technique": "Yop chagi"
+                },
+                {
+                    "stance": "Oreun apkubi",
+                    "technique": "Wen palkup momtong pyojeok chigi"
                 }
             ]
         },
@@ -152,8 +204,8 @@ var oh_jang = {
             "count": 17,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Oreun apkubi",
+                    "technique": "Olgul makki"
                 }
             ]
         },
@@ -162,7 +214,11 @@ var oh_jang = {
             "actions": [
                 {
                     "stance": "",
-                    "technique": ""
+                    "technique": "Yop chagi"
+                },
+                {
+                    "stance": "Wen apkubi",
+                    "technique": "Oreun palkup momtong pyojeok chigi"
                 }
             ]
         },
@@ -170,8 +226,12 @@ var oh_jang = {
             "count": 19,
             "actions": [
                 {
-                    "stance": "",
-                    "technique": ""
+                    "stance": "Wen apkubi",
+                    "technique": "Arae makki"
+                },
+                {
+                    "stance": "-||-",
+                    "technique": "Momtong an makki"
                 }
             ]
         },
@@ -180,7 +240,11 @@ var oh_jang = {
             "actions": [
                 {
                     "stance": "",
-                    "technique": ""
+                    "technique": "Ap chagi"
+                },
+                {
+                    "stance": "Oreun ap koa seogi",
+                    "technique": "Oreun deungjumeok olgul ap chigi (Kihap!!!"
                 }
             ]
         }

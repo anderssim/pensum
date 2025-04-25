@@ -2,7 +2,27 @@ var yi_jang = {
     "description": "",
     "name": "Yi Jang",
     "number": 2,
-    "type": "Taeguk",
+    "type": "Taegeuk",
+    "degree": {
+        "from": 9,
+        "to": 8,
+        "prevColor": "Gult bælte",
+        "newColor": "Grønt bælte",
+    },
+    "gwe": {
+        "name": "Tae",
+        "number": 2,
+        "emojii": "☱",
+        "description": "Taek er det andet af de otte trigrammer og symboliserer jorden, som er den anden af de fire grundlæggende elementer. Det repræsenterer også det kvindelige princip og styrken i naturen. Taek Gwe er den bløde kvindelige Gwe som markerer den uendelige koncentration af Yin energi.",
+    },
+    "physicalTest": {
+        "timeSeconds": 180,
+        "actions": [
+            {"name": "Armstrækninger", "count": 30},
+            {"name": "Englehop", "count": 30},
+            {"name": "Mavebøjninger", "count": 30}
+        ]
+    },
     "steps": [
         {
             "count": 1,
