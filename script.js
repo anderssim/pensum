@@ -49,9 +49,10 @@
                 <h3 class="pensum-title">Serie: ${pattern.type} ${pattern.name}</h3>
                 <div>Antal tællinger: ${pattern.steps.length}</div>
 
+                <div class="breaker_2"></div>
                 <div class="primary-content">
                     <button id="TEST_BUTTON" class="test_button">
-                        Test din viden om ${pattern.type} ${pattern.name}!
+                        <span style="font-weight: 500">Test din viden om</span><div> ${pattern.type} ${pattern.name}</div>
                     </button>
                 </div>                
                 <div class="breaker_2"></div>
@@ -59,8 +60,7 @@
                 <div class="flex-container">
                     ${renderGweButton(pattern)}
                     <div>
-                        <button id="PHYSICAL_INFO" class="info_button">
-                            <!-- <div class="emojii">🏋️‍♂️</div> -->
+                        <button id="PHYSICAL_INFO" class="info_button" info-text="Fysisk test">
                             🏋️‍♂️
                         </button>
                     </div>
@@ -69,13 +69,12 @@
         </div>`
         registerListeners(pattern);        
     }
-
+    
     function renderGweButton (pattern) {
         if (pattern.number < 9) {
             return /*html*/`
                 <div>
-                    <button id="GWE_INFO" class="info_button">
-                        <!-- <div class="emojii">${pattern.gwe.emojii}</div> -->
+                    <button id="GWE_INFO" class="info_button" info-text="${pattern.gwe.name}">
                         ${pattern.gwe.emojii}
                     </button>
                 </div>`
