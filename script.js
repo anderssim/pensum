@@ -12,6 +12,18 @@
         "koryo": koryo
     }
     
+    var pensumMap = {
+        "kup_8": kup_8,
+        "kup_7": kup_7,
+        "kup_6": kup_6,
+        "kup_5": kup_5,
+        "kup_4": kup_4,
+        "kup_3": kup_3,
+        "kup_2": kup_2,
+        "kup_1": kup_1,
+        "dan_1": dan_1,
+    }
+
     var pensum_box = document.getElementById("PENSUM_BOX");
     var levelSelect = document.getElementById("LEVEL_SELECT");
 
@@ -27,48 +39,336 @@
     });
 
     document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOMContentLoaded");
         const savedLevel = localStorage.getItem("selectedLevel");
+        console.log('savedLevel', savedLevel);
         if (savedLevel) {
             level = savedLevel;
             levelSelect.value = savedLevel;
             displayPensumLevel(level);
         } else {
-       
             level = levelSelect.options[0].value;
             displayPensumLevel(level);
         }
     });
+
     
     function displayPensumLevel (level) {
+
         var index = level;   
         var pattern = patterns[list[index].key];
-        pensum_box.innerHTML = /*html*/`
-        <div class="pensum">
-            <div class="pensum_text">
+        var pensum = pensumMap[list[index].degree];
                 
-                <h3 class="pensum-title">Serie: ${pattern.type} ${pattern.name}</h3>
-                <div>Antal tællinger: ${pattern.steps.length}</div>
+        pensum_box.innerHTML = renderTTU(pensum)
+        
+        registerPatternListeners(pensum);
+    }
 
-                <div class="breaker_2"></div>
-                <div class="primary-content">
-                    <button id="TEST_BUTTON" class="test_button">
-                        <span style="font-weight: 500">Test din viden om</span><div> ${pattern.type} ${pattern.name}</div>
-                    </button>
-                </div>                
-                <div class="breaker_2"></div>
+    function registerPatternListeners(pensum) {
+        var buttons = pensum.taegeuk.map(item => {
+            document.getElementById(item.key).addEventListener("click", () => {
+                var pattern = patterns[item.key];
+                showPattern(pattern)
+            })
+        })
+    }
 
-                <div class="flex-container">
-                    ${renderGweButton(pattern)}
+    function showPattern(pattern) {
+        
+
+        var modal = document.getElementById("MODAL");
+        modal.classList.remove('hidden');
+        modal.innerHTML = /*html*/`
+
+        <div class="modal-container">
+            <div class="modal_content">
+                <button id="CLOSE_MODAL" class="close_btn">✖</button>
+                <h3 style="margin-top: 10px;">
                     <div>
-                        <button id="PHYSICAL_INFO" class="info_button" info-text="Fysisk test">
-                            🏋️‍♂️
-                        </button>
+                        ${pattern.name}
+                    </div>
+                    <div style="font-size: 0.8em; margin-top: 5px; font-weight: 400;">
+                        Tællinger: ${pattern.steps.length}
+                    </div>
+                    
+                </h3>
+                <button id="TEST_BUTTON">Test mig!</button>
+
+                <!-- ${TemplatesAPI.renderAllSteps(pattern)} -->
+            </div>
+        </div>`
+        // var testButton = document.getElementById("TEST_BUTTON");
+        // testButton.addEventListener("click", () => {
+        //     showARandomQuestion(pattern);
+        // })
+        getHeightOfTableDiv();
+        registerCloseModalListener(modal);
+    }
+
+    function getHeightOfTableDiv() {
+        requestAnimationFrame(() => {
+            var viewportHeight = window.innerHeight;
+            var tableDiv = document.getElementById("TABLE_DIV");
+            if (tableDiv) {
+                console.log('tableDiv', tableDiv);
+                if (tableDiv.offsetHeight > viewportHeight) {
+                    tableDiv.style.height = (viewportHeight - 200) + "px";
+                    tableDiv.style.overflowY = "auto";
+                }
+            } else {
+                console.warn('TABLE_DIV element not found in the DOM.');
+            }
+            return ''
+        });
+    }
+
+    function renderTTU(pensum) {
+        return /*html*/`
+            <div class="pensum-container">
+
+                <div class="pensum-content">
+                    <h5 class="pensum-section-head">Serier</h5>
+                    <div class="content-emojii strong">🥋</div>
+                    <div class="grid-container">
+                        ${pensum.taegeuk.reverse().map(item => /*html*/`
+                            <button id="${item.key}" class="grid-button"> 
+                                <div class="grid-column">
+                                    <div class="p8tb">${item.number}. ${item.name}</div>
+                                </div>
+                                <div class="grid-column"></div>
+                            </button>
+                        `).join('')}
                     </div>
                 </div>
-            </div>            
-        </div>`
-        registerListeners(pattern);        
+                
+
+                <div class="pensum-content ${pensum.ttu.poomse.length > 0 ? '' : 'hidden'}">
+                    <h5 class="pensum-section-head">TTU Serier </h5>
+                    <div class="content-emojii strong">
+                        <img src="assets/um-yang.png" alt="uuummm" class="um-yang">
+                    </div>
+      
+                    <div class="grid-container">
+                        ${pensum.ttu.poomse.reverse().map(item => /*html*/`
+                            <div class="grid-column">
+                                <div class="p8tb">${item.number}. ${item.name}</div>
+                            </div>
+                            <div class="grid-column">
+                                <div></div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="pensum-content ${pensum.ttu.pensum.kyorugi.hanbon_kyorugi.son_dong_jak.length > 0 ? '' : 'hidden'}">                
+                    <h5 class="pensum-section-head">Hanbon kyorugi</h5>
+                    <div class="content-emojii hand">👊 <span>1</span></div>
+                    <div class="grid-container">
+                        ${pensum.ttu.pensum.kyorugi.hanbon_kyorugi.son_dong_jak.length > 0 ? `
+                            <div class="grid-column">
+                                <div class="p5tb">
+                                    <div class="no-mb">Son Dong Jak</div>
+                                    <div class="danish"><i>Et skridt (hånd)</i></div>    
+                                </div>
+                            </div>
+                            <div class="grid-column">
+                                <div class="pensum-value">1 - ${pensum.ttu.pensum.kyorugi.hanbon_kyorugi.son_dong_jak.length}</div>
+                            </div>
+                        ` : ''}
+                    
+                        ${pensum.ttu.pensum.kyorugi.hanbon_kyorugi.bal_dong_jak.length > 0 ? `
+                            <div class="grid-column">
+                                <div class="p5tb">    
+                                    <div class="no-mb">Bal Dong Jak</div>
+                                    <div class="danish"><i>Et skridt (fod)</i></div>
+                                </div>
+                            </div>
+                            <div class="grid-column ">
+                                <div class="pensum-value">1 - ${pensum.ttu.pensum.kyorugi.hanbon_kyorugi.bal_dong_jak.length}</div>
+                            </div>
+                        ` : ''}
+
+                        ${pensum.ttu.pensum.kyorugi.hanbon_kyorugi.eungyong_dong_jak.length > 0 ? `
+                            <div class="grid-column no-border">
+                                <div class="p5tb">
+                                    <div class="no-mb">Eungyong Dong Jak</div>
+                                    <div class="danish"><i>Et skridt (kombinationer)</i></div>
+                                </div>
+                            </div>
+                            <div class="grid-column no-border">
+                                <div class="pensum-value">1 - ${pensum.ttu.pensum.kyorugi.hanbon_kyorugi.eungyong_dong_jak.length}</div>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+          
+
+                <div class="pensum-content ${pensum.ttu.pensum.kyorugi.hosinsul.palmok_jagbi.length > 0 ? `` : 'hidden'}">
+                    <h5 class="pensum-section-head">Hosinsul</h5>
+                    <div class="content-emojii strong">🛡️</div>
+                    
+                    <div class="grid-container">
+                        ${pensum.ttu.pensum.kyorugi.hosinsul.palmok_jagbi.length > 0 ? `
+                            <div class="grid-column">
+                                <div class="p5tb">
+                                    <div class="no-mb">Palmok Jagbi</div>
+                                    <div class="danish"><i>Frigørelse (hånd)</i></div>
+                                </div>
+                            </div>
+                            <div class="grid-column">
+                                <div class="pensum-value">1 - ${pensum.ttu.pensum.kyorugi.hosinsul.palmok_jagbi.length}</div>
+                            </div>
+                        ` : ''}
+
+                        ${pensum.ttu.pensum.kyorugi.hosinsul.mom_jagbi.length > 0 ? `
+                            <div class="grid-column">
+                                <div class="p5tb">
+                                    <div class="no-mb">Mom Jagbi</div>
+                                    <div class="danish"><i>Frigørelse (krop)</i></div>
+                                </div>
+                            </div>
+                            <div class="grid-column">
+                                <div class="pensum-value"> 1 - ${pensum.ttu.pensum.kyorugi.hosinsul.mom_jagbi.length}</div>
+                            </div>
+                        ` : ''}
+
+                        ${pensum.ttu.pensum.kyorugi.hosinsul.jireugi.length > 0 ? `
+                            <div class="grid-column">
+                            <div class="p5tb">
+                                <div class="no-mb">Jireugi</div>
+                                <div class="danish"><i>Forsvar mod slag</i></div>
+                            </div>
+                            </div>
+                            <div class="grid-column ">
+                                <div class="pensum-value"> 1 - ${pensum.ttu.pensum.kyorugi.hosinsul.jireugi.length}</div>
+                            </div>
+                        ` : ''}
+                   </div>
+                
+
+                </div>
+
+
+                <div class="pensum-content">
+                    <h5 class="pensum-section-head">Sambon kyorugi</h5>
+                    <div class="content-emojii hand">👊 <span>3</span></div>
+                        <div class="grid-container">
+                            <div class="grid-column">
+                                <div class="p8tb">Tre skridts kamp</div>
+                            </div>
+                            <div class="grid-column">
+                                <div class="pensum-value">1 - ${pensum.ttu.pensum.kyorugi.sambon_kyorugi.length}</div>
+                            </div>
+                    </div>
+                </div>
+
+
+                <div class="pensum-content ${pensum.ttu.pensum.kyorugi.sparring.required ? ``: 'hidden'}" >
+                    <h5 class="pensum-section-head">Frikamp</h5>
+                    <div class="content-emojii strong">⚔️</div>
+                    <div class="grid-container">
+                        <div class="grid-column">
+                            <div class="p8tb">Runder</div>
+                        </div>
+                        <div class="grid-column">
+                            <div class="pensum-value">${pensum.ttu.pensum.kyorugi.sparring.rounds} x ${pensum.ttu.pensum.kyorugi.sparring.roundTimeSeconds / 60} <span class="danish" >minutter</span> </div>
+                        </div>
+                        <div class="grid-column">
+                            <div class="p8tb">Beskyttelse</div>
+                        </div>
+                        <div class="grid-column">
+                            <div class="pensum-value">${pensum.ttu.pensum.kyorugi.sparring.protection ? 'Ja' : 'Nej'}</div>
+                        </div>
+                        <div class="grid-column">
+                            <div class="p8tb">2 mod 1 frikamp</div>
+                        </div>
+                        <div class="grid-column">
+                            <div class="pensum-value">${pensum.ttu.pensum.kyorugi.sparring['1vs2'] ? 'Ja' : 'Nej'}</div>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="pensum-content  ${pensum.ttu.pensum.kyokpa.required ? ``: 'hidden'}">
+                    <h5 class="pensum-section-head">Gennembrydning</h5>
+                    <div class="content-emojii strong"><span>💥</span>🧱</div>
+                    <div class="grid-container">                    
+                        <div class="grid-column">
+                            <div>Brædder</div>
+                        </div>
+                        <div class="grid-column">
+                            <div class="p5tb">
+                                ${pensum.ttu.pensum.kyokpa.punch ? `<div>- Slag</div>` : ''}
+                                ${pensum.ttu.pensum.kyokpa.kick ? `<div>- Spark</div>` : ''}
+                                ${pensum.ttu.pensum.kyokpa.jump_kick ? `<div>- Flyvespark</div>` : ''}
+                            </div>
+                        </div>
+
+                        ${pensum.ttu.pensum.kyokpa.bricks.required ? `
+                            <div class="grid-column">
+                                <div class="p5tb">
+                                    <div class="no-mb">Tagsten</div>
+                                    <div class="danish"><i>Alderskrav: ${pensum.ttu.pensum.kyokpa.bricks.requirements.age} år</i></div>
+                                </div>
+                            </div>
+                            <div class="grid-column">
+                                <div class="pensum-value" style="padding: 3px 0;">
+                                    <div>
+                                        <div class="danish" style="width: 70px; display: inline-block">Mænd:</div>${pensum.ttu.pensum.kyokpa.bricks.male} 
+                                    </div>
+                                    <div>
+                                        <div class="danish" style="width: 70px; display: inline-block;">Kvinder:</div>${pensum.ttu.pensum.kyokpa.bricks.female}
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        `: ''}
+                    </div>                    
+                </div>
+                
+
+
+                <div class="pensum-content">
+                    <h5 class="pensum-section-head">Fysisk pensum</h5>
+                    
+                    <div class="content-emojii strong">🏋️</div>
+                    <div class="grid-container">                    
+                        <div class="grid-column">
+                            <div class="p8tb">Armbøjninger</div>
+                        </div>
+                        <div class="grid-column">
+                            <div class="pensum-value" >
+                                ${pensum.physical.push_ups}
+                            </div>
+                        </div>
+
+                        <div class="grid-column">
+                            <div class="p8tb">Mavebøjninger</div>
+                        </div>
+                        <div class="grid-column">
+                            <div class="pensum-value" >
+                                ${pensum.physical.sit_ups}
+                            </div>
+                        </div>
+
+                        <div class="grid-column">
+                            <div class="p8tb">Englehop</div>
+                        </div>
+                        <div class="grid-column">
+                            <div class="pensum-value" >
+                                ${pensum.physical.jumping_jacks}
+                            </div>
+                        </div>
+                        <div class="p5tb">
+                            <i>Tid til rådighed: ${pensum.physical.timeSeconds / 60} minutter</i>
+                        </div>
+                    </div>                    
+                </div>
+            </div>`
     }
+
+
+    
     
     function renderGweButton (pattern) {
         if (pattern.number < 9) {
@@ -83,24 +383,68 @@
     }
 
     function registerListeners(pattern) {
-        var gweButton = document.getElementById("GWE_INFO");
-        var physicalButton = document.getElementById("PHYSICAL_INFO");
-        var testButton = document.getElementById("TEST_BUTTON");
 
-        if (pattern.number < 9) {
-            gweButton.addEventListener("click", () => {
-                showGweInfo(pattern);
-            });
-        }
+        var latestFormButton = document.getElementById("LATEST_FORM");
 
-        physicalButton.addEventListener("click", () => {
-            showPhysicalInfo(pattern);
-        });
-
-        testButton.addEventListener("click", () => {
-            showARandomQuestion(pattern);
+        latestFormButton.addEventListener("click", () => {
+            showLatestForm(pattern)
         })
+
+        // var gweButton = document.getElementById("GWE_INFO");
+        // var physicalButton = document.getElementById("PHYSICAL_INFO");
+        
+        // if (pattern.number < 9) {
+            //     gweButton.addEventListener("click", () => {
+                //         showGweInfo(pattern);
+                //     });
+                // }
+                
+                // physicalButton.addEventListener("click", () => {
+                    //     showPhysicalInfo(pattern);
+                    // });
+                    
+        // var testButton = document.getElementById("TEST_BUTTON");
+        // testButton.addEventListener("click", () => {
+        //     showARandomQuestion(pattern);
+        // })
     }
+
+    // function showLatestForm (pattern) {
+    //     var modal = document.getElementById("MODAL");
+    //     modal.classList.remove('hidden');
+    //     modal.innerHTML = /*html*/`
+
+    //     <div class="modal-container">
+    //         <div class="modal_content">
+    //             <button id="CLOSE_MODAL" class="close_btn">✖</button>
+    //             <h4 class="pensum-title">${pattern.name}</h4>
+    //             <button id="TEST_BUTTON">Test mig!</button>
+    //             ${TemplatesAPI.renderAllSteps(pattern)}
+    //         </div>
+    //     </div>`
+    //     var testButton = document.getElementById("TEST_BUTTON");
+    //     testButton.addEventListener("click", () => {
+    //         showARandomQuestion(pattern);
+    //     })
+    //     registerCloseModalListener(modal);
+    // }
+
+    // function getHeightOfTableDiv() {
+    //     requestAnimationFrame(() => {
+    //         var viewportHeight = window.innerHeight;
+    //         var tableDiv = document.getElementById("TABLE_DIV");
+    //         if (tableDiv) {
+    //             console.log('tableDiv', tableDiv);
+    //             if (tableDiv.offsetHeight > viewportHeight) {
+    //                 tableDiv.style.height = (viewportHeight - 200) + "px";
+    //                 tableDiv.style.overflowY = "auto";
+    //             }
+    //         } else {
+    //             console.warn('TABLE_DIV element not found in the DOM.');
+    //         }
+    //         return ''
+    //     });
+    // }
     
     function showGweInfo (pattern) {
         var modal = document.getElementById("MODAL");
@@ -272,7 +616,5 @@
             modal.innerHTML = "";
         })
     }
-
-    displayPensumLevel(0);
 
 })();

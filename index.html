@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poomsae Steps</title>
+    <title>TTU Pensum</title>
 
     <link rel="stylesheet" href="styles.css">
     <script src="list.js" type="application/javascript"></script>
@@ -18,24 +18,36 @@
     <script src="patterns/chil_jang.js" type="application/javascript"></script>
     <script src="patterns/pal_jang.js" type="application/javascript"></script>
     <script src="patterns/koryo.js" type="application/javascript"></script>
-    
+    <script src="pensum/kup_8.js" type="application/javascript"></script>
+    <script src="pensum/kup_7.js" type="application/javascript"></script>
+    <script src="pensum/kup_6.js" type="application/javascript"></script>
+    <script src="pensum/kup_5.js" type="application/javascript"></script>
+    <script src="pensum/kup_4.js" type="application/javascript"></script>
+    <script src="pensum/kup_3.js" type="application/javascript"></script>
+    <script src="pensum/kup_2.js" type="application/javascript"></script>
+    <script src="pensum/kup_1.js" type="application/javascript"></script>
+    <script src="pensum/dan_1.js" type="application/javascript"></script>
     
 </head>
 <body>
 
     <div class="container">
 
-        <div class="header">
-            <img src="assets/islev-logo.png" alt="Logo" class="logo">
-            <div>
-                <h3 class="title" >Islev Taekwondo Klub</h3>
-                <div class="sub_title">태 권 도</div>
+        <div class="header-container">
+            <div class="header">
+                <img src="assets/islev-logo.png" alt="Logo" class="logo">
+                <div>
+                    <h3 class="title" >Islev Taekwondo Klub</h3>
+                    <div class="sub_title">태 권 도</div>
+                </div>
+    
             </div>
+            <div>
+                <select id="LEVEL_SELECT" class="select_level"></select>
+            </div>      
         </div>
 
-        <div>
-            <select id="LEVEL_SELECT" class="select_level"></select>
-        </div>      
+        
         <div id="MODAL" class="hidden"></div>
         <div id="PENSUM_BOX"></div>
         

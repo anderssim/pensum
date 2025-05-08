@@ -24,6 +24,28 @@ var il_jang = {
             {"name": "Mavebøjninger", "count": 25}
         ]
     },
+    "pensum": {
+        "degree": "Kup 8",
+        "belt": "Gult",
+        "taegeuk": [{
+            "name": "Taegeuk Il Jang",
+            "number": 1,
+        }],
+        "poomsae": "",
+        "kyorugi": {
+            "sambon": ["1", "2"],
+            "hanbon_kyorugi": {
+                "son_dong_jak": [],
+                "bal_dong_jak": [],
+                "eungyong_dong_jak": [],
+            },
+            "hosinsul":{
+                "mom_jagbi": [],
+                "palmok_jagbi": [],
+                "jireugi": [],
+            }
+        }
+    },
     "steps": [
         {
             "count": 1,
