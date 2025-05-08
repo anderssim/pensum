@@ -94,13 +94,13 @@
                 </h3>
                 <button id="TEST_BUTTON">Test mig!</button>
 
-                <!-- ${TemplatesAPI.renderAllSteps(pattern)} -->
+                ${TemplatesAPI.renderAllSteps(pattern)}
             </div>
         </div>`
-        // var testButton = document.getElementById("TEST_BUTTON");
-        // testButton.addEventListener("click", () => {
-        //     showARandomQuestion(pattern);
-        // })
+        var testButton = document.getElementById("TEST_BUTTON");
+        testButton.addEventListener("click", () => {
+            showARandomQuestion(pattern);
+        })
         getHeightOfTableDiv();
         registerCloseModalListener(modal);
     }
