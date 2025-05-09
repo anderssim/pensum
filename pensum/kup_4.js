@@ -72,6 +72,14 @@ const kup_4 = {
             },
         }
     },
+    "symbolism": {
+        "gwe": {
+            "name": "Seon",
+            "number": 5,
+            "emoji": "☶",
+            "description": "Seon er det femte af de otte trigrammer og symboliserer bjerg, som er det femte af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Gan Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
+        },
+    },
     "physical": {
         "timeSeconds": 270,
         "push_ups": 45,

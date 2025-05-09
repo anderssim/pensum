@@ -1,7 +1,7 @@
 
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family:'Helvetica','Arial', sans-serif;
     background-color: #e7e7e7;
     color: #333;
     margin: 0;
@@ -51,6 +51,12 @@ td {
 
 h5 {
     margin: 6px 0 8px 0;
+}
+
+.h5-minor {
+    font-size: 0.75em;
+    color: #666;
+    font-weight: 400;
 }
 
 .select_level{
@@ -240,6 +246,11 @@ h5 {
     margin: 0;
 } */
 
+.gwe-size {
+    font-size: 1.5em;
+    margin: 0;
+}
+
 .close_btn {
     font-size: 1.5em;
     color: #333;
@@ -384,8 +395,23 @@ h5 {
     position: relative;
 }
 
-.content-emojii {
+.content-emoji {
     position: absolute;
+}
+
+.emo-symbols {
+    position: absolute;
+    top: -7px;
+    left: -30px;
+}
+.emo-tri {
+    font-size: 1.36em!important;
+}
+.emo-eye {
+    position: absolute;
+    top: 18px;
+    left: 8px;
+    font-size: .45em!important;
 }
 
 .strong {

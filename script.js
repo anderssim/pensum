@@ -128,7 +128,7 @@
 
                 <div class="pensum-content">
                     <h5 class="pensum-section-head">Serier</h5>
-                    <div class="content-emojii strong">🥋</div>
+                    <div class="content-emoji strong">🥋</div>
                     <div class="grid-container">
                         ${pensum.taegeuk.reverse().map(item => /*html*/`
                             <button id="${item.key}" class="grid-button"> 
@@ -144,7 +144,7 @@
 
                 <div class="pensum-content ${pensum.ttu.poomse.length > 0 ? '' : 'hidden'}">
                     <h5 class="pensum-section-head">TTU Serier </h5>
-                    <div class="content-emojii strong">
+                    <div class="content-emoji strong">
                         <img src="assets/um-yang.png" alt="uuummm" class="um-yang">
                     </div>
       
@@ -161,8 +161,8 @@
                 </div>
 
                 <div class="pensum-content ${pensum.ttu.pensum.kyorugi.hanbon_kyorugi.son_dong_jak.length > 0 ? '' : 'hidden'}">                
-                    <h5 class="pensum-section-head">Hanbon kyorugi</h5>
-                    <div class="content-emojii hand">👊 <span>1</span></div>
+                    <h5 class="pensum-section-head">Hanbon kyorugi <span class="h5-minor">(Et skridt kamp)</span></h5>
+                    <div class="content-emoji hand">👊 <span>1</span></div>
                     <div class="grid-container">
                         ${pensum.ttu.pensum.kyorugi.hanbon_kyorugi.son_dong_jak.length > 0 ? `
                             <div class="grid-column">
@@ -204,8 +204,8 @@
           
 
                 <div class="pensum-content ${pensum.ttu.pensum.kyorugi.hosinsul.palmok_jagbi.length > 0 ? `` : 'hidden'}">
-                    <h5 class="pensum-section-head">Hosinsul</h5>
-                    <div class="content-emojii strong">🛡️</div>
+                    <h5 class="pensum-section-head">Hosinsul <span class="h5-minor">(Selvforsvar)</span></h5>
+                    <div class="content-emoji strong">🛡️</div>
                     
                     <div class="grid-container">
                         ${pensum.ttu.pensum.kyorugi.hosinsul.palmok_jagbi.length > 0 ? `
@@ -250,8 +250,8 @@
 
 
                 <div class="pensum-content">
-                    <h5 class="pensum-section-head">Sambon kyorugi</h5>
-                    <div class="content-emojii hand">👊 <span>3</span></div>
+                    <h5 class="pensum-section-head">Sambon kyorugi <span class="h5-minor">(Tre skridts kamp)</span></h5>
+                    <div class="content-emoji hand">👊 <span>3</span></div>
                         <div class="grid-container">
                             <div class="grid-column">
                                 <div class="p8tb">Tre skridts kamp</div>
@@ -265,7 +265,7 @@
 
                 <div class="pensum-content ${pensum.ttu.pensum.kyorugi.sparring.required ? ``: 'hidden'}" >
                     <h5 class="pensum-section-head">Frikamp</h5>
-                    <div class="content-emojii strong">⚔️</div>
+                    <div class="content-emoji strong">⚔️</div>
                     <div class="grid-container">
                         <div class="grid-column">
                             <div class="p8tb">Runder</div>
@@ -291,7 +291,7 @@
                
                 <div class="pensum-content  ${pensum.ttu.pensum.kyokpa.required ? ``: 'hidden'}">
                     <h5 class="pensum-section-head">Gennembrydning</h5>
-                    <div class="content-emojii strong"><span>💥</span>🧱</div>
+                    <div class="content-emoji strong"><span>💥</span>🧱</div>
                     <div class="grid-container">                    
                         <div class="grid-column">
                             <div>Brædder</div>
@@ -331,7 +331,7 @@
                 <div class="pensum-content">
                     <h5 class="pensum-section-head">Fysisk pensum</h5>
                     
-                    <div class="content-emojii strong">🏋️</div>
+                    <div class="content-emoji strong">🏋️</div>
                     <div class="grid-container">                    
                         <div class="grid-column">
                             <div class="p8tb">Armbøjninger</div>
@@ -364,6 +364,90 @@
                         </div>
                     </div>                    
                 </div>
+
+                <div class="pensum-content">
+                    <h5 class="pensum-section-head">Baggrund <span class="h5-minor">(Historie og symbolikker)</span></h5>
+                    
+                    <div class="content-emoji strong">
+                        <div class="emo-symbols">
+                            <div class="emo-eye">👁</div>
+                            <div class="emo-tri">🜂</div>
+                        </div>
+
+                        
+                    </div>
+                    
+                    <div class="grid-container">                    
+                        <div class="grid-column">
+                            <div class="p8tb">Teakwondo historie</div>
+                        </div>
+                        <div class="grid-column">
+                            <div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="grid-column">
+                            <div class="p8tb">Flaget</div>
+                        </div>
+                        <div class="grid-column">
+                            <div>
+                                
+                            </div>
+                        </div>
+                                      
+                        <div class="grid-column">
+                            <div class="p8tb">Gwe'erne</div>
+                        </div>
+                        <div class="grid-column">
+                            <div>
+                                
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="pensum-content">
+                    <h5 class="pensum-section-head">Kroppen
+                        <!-- <span class="h5-minor">(Historie og symbolikker)</span> -->
+                    </h5>
+                    
+                    <div class="content-emoji strong">🧘</div>
+                    
+                    <div class="grid-container">                    
+                        <div class="grid-column">
+                            <div class="p8tb">Generelt</div>
+                        </div>
+                        <div class="grid-column"></div>
+                                     
+                        <div class="grid-column">
+                            <div class="p8tb">Sårbare punkter</div>
+                        </div>
+                        <div class="grid-column">
+                            <div>
+                                Hoved, hals
+                            </div>
+                        </div>
+                        
+                        <div class="grid-column">
+                            <div class="p8tb">Sårbare punkter</div>
+                        </div>
+                        <div class="grid-column">
+                            <div>
+                                Krop <span class="danish">(for og bag)</span>
+                            </div>
+                        </div>
+
+                        <div class="grid-column">
+                            <div class="p8tb">Sårbare punkter</div>
+                        </div>
+                        <div class="grid-column">
+                            <div>
+                                Arme, ben
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
             </div>`
     }
 
@@ -375,7 +459,7 @@
             return /*html*/`
                 <div>
                     <button id="GWE_INFO" class="info_button" info-text="${pattern.gwe.name}">
-                        ${pattern.gwe.emojii}
+                        ${pattern.gwe.emoji}
                     </button>
                 </div>`
         }
@@ -455,7 +539,7 @@
             <div class="modal_content">
                 <button id="CLOSE_MODAL" class="close_btn">✖</button>
                 <div>
-                    <h1 class="gwe_info">${pattern.gwe.emojii}</h1>
+                    <h1 class="gwe_info">${pattern.gwe.emoji}</h1>
                 </div>
                 <div>
                     <h2>${pattern.gwe.name}</h2>

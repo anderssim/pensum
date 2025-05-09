@@ -84,6 +84,14 @@ const kup_2 = {
             },
         }
     },
+    "symbolism": {
+        "gwe": {
+            "name": "Gan",
+            "number": 7,
+            "emoji": "☷",
+            "description": "Gan er det syvende af de otte trigrammer og symboliserer jorden, som er det syvende af de fire grundlæggende elementer. Det repræsenterer også det kvindelige princip og styrken i naturen. Gon Gwe er den bløde kvindelige Gwe som markerer den uendelige koncentration af Yin energi.",
+        },
+    },
     "physical": {
         "timeSeconds": 330,
         "push_ups": 55,

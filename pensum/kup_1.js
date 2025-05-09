@@ -90,6 +90,14 @@ const kup_1 = {
             },
         }
     },
+    "symbolism": {
+        "gwe": {
+            "name": "Gon",
+            "number": 8,
+            "emoji": "☳",
+            "description": "Gon er det ottende af de otte trigrammer og symboliserer torden, som er det ottende af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Jin Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
+        },
+    },
     "physical": {
         "timeSeconds": 360,
         "push_ups": 60,

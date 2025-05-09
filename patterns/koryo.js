@@ -12,7 +12,7 @@ var koryo = {
     "gwe": {
         "name": "",
         "number": null,
-        "emojii": "",
+        "emoji": "",
         "description": "",
     },
     "physicalTest": {

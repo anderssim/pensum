@@ -111,6 +111,9 @@ const dan_1 = {
             },
         }
     },  
+    "symbolism": {
+        "gwe": {}
+    },
     "physical": {
         "timeSeconds": 390,
         "push_ups": 70,
