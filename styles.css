@@ -212,6 +212,23 @@ h5 {
 
 
 
+.gwe-container {
+    background-color: #333;
+    position: relative;
+}
+
+.gwe-keyword-arc {
+    position: absolute; 
+    top: 50px;
+    left: 140px;
+    rotate: 5deg;
+}
+
+.gwe-keyword-bobble {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+}
+
 .flex-container {
     display: flex;
 }
@@ -262,6 +279,35 @@ h5 {
     right: 10px;
 }
 
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 24px 8px 16px;
+    color: #fff;
+    background-color: #668db7;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+
+
+
+
+.cta-button::before {
+    content: "🎓";
+    margin-right: 8px; 
+}
+
+
+.test-button {
+    padding: 5px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 3px;
+}
 
 .radio_button {
     margin: 10px 0;
@@ -318,6 +364,39 @@ h5 {
 }
 
 
+.gwe-on-list {
+    position: relative;
+    display: flex; 
+    align-items: center;
+    line-height: 1;
+    font-size: 1em;
+    width: auto;
+}
+
+.gwe-on-list::before {
+    content: attr(gwe-emoji);
+    font-size: 2em; 
+    line-height: 1;
+    margin-right: 5px;
+    margin-left: -40px;
+    margin-top: -4px;
+}
+
+.gwe-on-list-name {
+    font-size: 1em; 
+    line-height: 1;
+    margin-left: 5px; 
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.gwe-on-list-name-element {
+    font-size: 0.85em;
+    color: #666;
+    font-weight: normal;
+    padding-top: 2px;
+    
+}
 
 
 
@@ -377,6 +456,42 @@ h5 {
 
 /* CARDS */
 
+.gwe-symbol {
+
+    font-size: 8em;
+    line-height: 70px;
+    text-align: left;
+    background-color: #333;
+    height: 95px;
+    margin-top: 15px;
+    overflow-y: hidden;
+    position: relative;
+    color: white;
+
+}
+
+
+
+/* .gwe-symbol {
+
+    font-size: 8em;
+    line-height: 60px;
+    text-align: center;
+    background-color: pink;
+    height: 80px;
+    margin-top: 15px;
+    overflow-y: hidden;
+    position: relative;
+
+} */
+
+.gwe-symbol::after {
+    content: attr(gwe-name);
+    position: absolute;
+    font-size: 30%;
+    top: 30px;
+    font-weight: 300;
+}
 
 .pensum-container {
     display: grid; 

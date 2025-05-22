@@ -15,6 +15,20 @@ var il_jang = {
         "number": 1,
         "emoji": "☰",
         "description": "Geon er det første af de otte trigrammer og symboliserer himlen, som er den første af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Geon Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
+        "keywords": [
+            {
+                "Positivitet": "🌞"
+            },      
+            {
+                "Himmelen": "☁️"
+            },
+            {
+                "Styrke": "💪"
+            },
+            {
+                "Begyndelsen": "🌱"
+            },
+        ]
     },
     "physicalTest": {
         "timeSeconds": 150,

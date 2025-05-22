@@ -24,6 +24,8 @@
         "dan_1": dan_1,
     }
 
+    
+
     var pensum_box = document.getElementById("PENSUM_BOX");
     var levelSelect = document.getElementById("LEVEL_SELECT");
 
@@ -73,7 +75,7 @@
         })
     }
 
-    function showPattern(pattern) {
+    function showPattern(pattern) {
         
 
         var modal = document.getElementById("MODAL");
@@ -83,16 +85,18 @@
         <div class="modal-container">
             <div class="modal_content">
                 <button id="CLOSE_MODAL" class="close_btn">✖</button>
-                <h3 style="margin-top: 10px;">
+                <h3 style="margin: 0px;">
                     <div>
-                        ${pattern.name}
+                        <div style="display: inline-block;">${pattern.name}</div> 
                     </div>
-                    <div style="font-size: 0.8em; margin-top: 5px; font-weight: 400;">
-                        Tællinger: ${pattern.steps.length}
-                    </div>
-                    
                 </h3>
-                <button id="TEST_BUTTON">Test mig!</button>
+              
+                
+                
+
+                    
+                <div class="p5tb">${pattern.steps.length} tællinger </div>
+                <button class="cta-button" id="TEST_BUTTON">Test din viden</button>
 
                 ${TemplatesAPI.renderAllSteps(pattern)}
             </div>
@@ -112,7 +116,7 @@
             if (tableDiv) {
                 console.log('tableDiv', tableDiv);
                 if (tableDiv.offsetHeight > viewportHeight) {
-                    tableDiv.style.height = (viewportHeight - 200) + "px";
+                    tableDiv.style.height = (viewportHeight - 240) + "px";
                     tableDiv.style.overflowY = "auto";
                 }
             } else {
@@ -123,6 +127,11 @@
     }
 
     function renderTTU(pensum) {
+
+        // showPattern(patterns["il_jang"])
+        // showPattern(patterns["yi_jang"])
+        // showPattern(patterns["sam_jang"])
+        // showPattern(patterns["sah_jang"])
         return /*html*/`
             <div class="pensum-container">
 
@@ -130,12 +139,21 @@
                     <h5 class="pensum-section-head">Serier</h5>
                     <div class="content-emoji strong">🥋</div>
                     <div class="grid-container">
-                        ${pensum.taegeuk.reverse().map(item => /*html*/`
+                        
+                        ${pensum.taegeuk.map(item => /*html*/`
                             <button id="${item.key}" class="grid-button"> 
                                 <div class="grid-column">
                                     <div class="p8tb">${item.number}. ${item.name}</div>
                                 </div>
-                                <div class="grid-column"></div>
+                                <div class="grid-column ">
+
+                                ${Analogies[item.key]().gwe ? `
+                                    <div class="gwe-on-list" gwe-emoji="${Analogies[item.key]().gwe.emoji}">
+                                        <span class="gwe-on-list-name">${Analogies[item.key]().gwe.name}</span>
+                                        <span class="gwe-on-list-name-element" >${Analogies[item.key]().gwe.primary}</span>
+                                    </div>`: ''}
+
+                                </div>
                             </button>
                         `).join('')}
                     </div>
@@ -149,7 +167,7 @@
                     </div>
       
                     <div class="grid-container">
-                        ${pensum.ttu.poomse.reverse().map(item => /*html*/`
+                        ${pensum.ttu.poomse.map(item => /*html*/`
                             <div class="grid-column">
                                 <div class="p8tb">${item.number}. ${item.name}</div>
                             </div>
@@ -474,61 +492,9 @@
             showLatestForm(pattern)
         })
 
-        // var gweButton = document.getElementById("GWE_INFO");
-        // var physicalButton = document.getElementById("PHYSICAL_INFO");
-        
-        // if (pattern.number < 9) {
-            //     gweButton.addEventListener("click", () => {
-                //         showGweInfo(pattern);
-                //     });
-                // }
-                
-                // physicalButton.addEventListener("click", () => {
-                    //     showPhysicalInfo(pattern);
-                    // });
-                    
-        // var testButton = document.getElementById("TEST_BUTTON");
-        // testButton.addEventListener("click", () => {
-        //     showARandomQuestion(pattern);
-        // })
+    
     }
 
-    // function showLatestForm (pattern) {
-    //     var modal = document.getElementById("MODAL");
-    //     modal.classList.remove('hidden');
-    //     modal.innerHTML = /*html*/`
-
-    //     <div class="modal-container">
-    //         <div class="modal_content">
-    //             <button id="CLOSE_MODAL" class="close_btn">✖</button>
-    //             <h4 class="pensum-title">${pattern.name}</h4>
-    //             <button id="TEST_BUTTON">Test mig!</button>
-    //             ${TemplatesAPI.renderAllSteps(pattern)}
-    //         </div>
-    //     </div>`
-    //     var testButton = document.getElementById("TEST_BUTTON");
-    //     testButton.addEventListener("click", () => {
-    //         showARandomQuestion(pattern);
-    //     })
-    //     registerCloseModalListener(modal);
-    // }
-
-    // function getHeightOfTableDiv() {
-    //     requestAnimationFrame(() => {
-    //         var viewportHeight = window.innerHeight;
-    //         var tableDiv = document.getElementById("TABLE_DIV");
-    //         if (tableDiv) {
-    //             console.log('tableDiv', tableDiv);
-    //             if (tableDiv.offsetHeight > viewportHeight) {
-    //                 tableDiv.style.height = (viewportHeight - 200) + "px";
-    //                 tableDiv.style.overflowY = "auto";
-    //             }
-    //         } else {
-    //             console.warn('TABLE_DIV element not found in the DOM.');
-    //         }
-    //         return ''
-    //     });
-    // }
     
     function showGweInfo (pattern) {
         var modal = document.getElementById("MODAL");
@@ -599,7 +565,7 @@
                 <button id="CLOSE_MODAL" class="close_btn">✖</button>
                 <div class="inner-content">
                     <div class="question" id="QUESTION_CONTAINER">
-                        <h5 class="question-title">Spørgsmål 🤔</h5>
+                        <h3 class="question-title">Spørgsmål er... 🤔</h3>
                         <p>Hvilken stand og ${step.actions.length > 1 ? 'teknikker' : 'teknik'} skal man udføre på <br>${pattern.type} <b>${pattern.name}'s</b> tælling nummer: <span class="countHighlight">${step.count}</span></p>
                     </div>
                     <div class="question relative hidden" id="RESPONSE_CONTAINER">
@@ -607,7 +573,7 @@
                     </div>                    
                     <div class="hidden" id="ANSWER_CONTAINER"></div>
                     <div>
-                        <button id="ANSWER_BUTTON" class="answer_btn">Check dit svar</button>
+                        <button id="ANSWER_BUTTON" class="answer_btn">Se svaret</button>
                         <div class="clear"></div>
                     </div>
                 </div>

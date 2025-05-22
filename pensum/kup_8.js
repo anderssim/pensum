@@ -6,7 +6,17 @@ const kup_8 = {
             "name": "Il Jang",
             "number": 1,
             "prefix": "Taegeuk",
-            'key': "il_jang",
+            "key": "il_jang",
+            "symbols": {
+                "gwe": {
+                    "name": "Geon",
+                    "number": 1,
+                    "emoji": "☰",
+                    "element": "☁️",
+                    "primary": "Himlen",
+                    "secondary": "Begyndelsen",
+                }
+            }
         }
     ],
     "ttu": {

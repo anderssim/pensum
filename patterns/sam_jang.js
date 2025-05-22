@@ -14,6 +14,17 @@ var sam_jang = {
         "number": 3,
         "emoji": "☲",
         "description": "Ri er det tredje af de otte trigrammer og symboliserer ild, som er det tredje af de fire grundlæggende elementer. Det repræsenterer også det mandlige princip og styrken i naturen. Ri Gwe er den kraftfulde mandlige Gwe som markerer den uendelige koncentration af Yang energi.",
+         "keywords": [
+            {
+                "Lyset": "💫"
+            },      
+            {
+                "Fortsat vækst": "🌿"
+            },
+            {
+                "Passion": "🔥"
+            }
+        ]
     },
     "physicalTest": {
         "timeSeconds": 210,
