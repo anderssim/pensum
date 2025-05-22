@@ -9,7 +9,7 @@ const Analogies = (() => {
                 "number": 1,
                 "emoji": "☰",
                 "element": "☁️",
-                "primary": "Himlen",
+                "primary": "Himmel",
                 // "secondary": "Begyndelsen",
             }
         }
@@ -22,7 +22,7 @@ const Analogies = (() => {
                 "number": 2,
                 "emoji": "☱",
                 "element": "🌊",
-                "primary": "Søen",
+                "primary": "Sø",
                 // "secondary": "Glæden",
             }
         }
@@ -48,7 +48,7 @@ const Analogies = (() => {
                 "number": 4,
                 "emoji": "☵",
                 "element": "🌩️",
-                "primary": "Lyn",
+                "primary": "Torden",
                 // "secondary": "Bevægelse",
             }
         }   
@@ -99,7 +99,7 @@ const Analogies = (() => {
                  "number": 8,
                 "emoji": "☳",
                 "element": "⛰️",
-                "primary": "Jord",
+                "primary": "Jorden",
             },
         }
     }
