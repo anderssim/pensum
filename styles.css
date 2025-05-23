@@ -599,6 +599,8 @@ h5 {
     padding: 3px;
 }
 
+
+
 .grid-column > div {
     width: 90%;
 }
@@ -633,3 +635,201 @@ h5 {
 .p8tb   { padding: 8px 0  }
 .p10tb  { padding: 10px 0 }
 
+
+.flag-container {
+    position: relative;
+    width: 100%; 
+    max-width: 400px;
+    min-width: 200px;
+    margin: 100px auto;
+}
+
+.flag {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Trigram Base Style */
+.trigram {
+    position: absolute;
+    width: 50px; /* Adjust size */
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Trigram Labels (Using ::after) */
+.trigram::after {
+    content: attr(data-label);
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #333;
+    font-size: 0.9em;
+    padding: 5px 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    /* opacity: 0; */
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* Show Label on Hover */
+.trigram:hover::after {
+    opacity: 1;
+}
+
+/* Position Trigrams */
+.trigram-geon {
+    
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 20%;
+    height: 28%;
+    
+    
+}
+
+.trigram-geon::after {
+
+    content: "Geon\A Himmel\A Il-Jang";
+    position: absolute;
+    top: -50px;
+    white-space: pre-wrap; 
+} 
+
+.trigram-geon::before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Start at the bottom of the trigram */
+    right: 0; /* Align to the bottom-right of the trigram */
+    width: 1px;
+    height: calc(100%); /* Adjust height to reach the label */
+    
+    border-left: 1px dashed #333; /* Dashed line */
+}
+
+.trigram-gam {
+    /* top: 10%;
+    right: 20%; */
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 20%;
+    height: 28%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.trigram-ri {
+    
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 20%;
+    height: 28%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.trigram-gon {
+    /* bottom: 10%;
+    right: 20%; */
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 20%;
+    height: 28%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .flag {
+    display: block; 
+    max-width: 100%;
+    height: auto; 
+    margin: 0 auto; 
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+
+#infographic-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.infographic-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.infographic-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.infographic-flag {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+.infographic-details {
+    font-size: 1em;
+    color: #555;
+    text-align: left;
+}
+
+.infographic-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.infographic-details li {
+    margin: 5px 0;
+} */

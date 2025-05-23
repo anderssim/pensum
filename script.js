@@ -64,6 +64,14 @@
         pensum_box.innerHTML = renderTTU(pensum)
         
         registerPatternListeners(pensum);
+        registerFlagListeners();
+    }
+
+    function registerFlagListeners() {
+        document.getElementById("FLAG_INFO").addEventListener("click", () => {
+            // showFlagInfo();
+        })
+
     }
 
     function registerPatternListeners(pensum) {
@@ -73,6 +81,51 @@
                 showPattern(pattern)
             })
         })
+    }
+
+    function showFlagInfo () {
+        var modal = document.getElementById("MODAL");
+        modal.classList.remove('hidden');
+        modal.innerHTML = /*html*/`
+            <div class="modal-container">
+            <div class="modal_content">
+                <button id="CLOSE_MODAL" class="close_btn">✖</button>
+                <h3 style="margin: 0px;">
+                    <div>
+                        <div style="display: inline-block;">Taegeukgi</div> 
+                    </div>
+                </h3>
+                <!-- <div class="flag-container">
+                    <img src="assets/taegeuki.mid.jpg" alt="flag" class="flag">
+                </div> -->
+
+                <div class="flag-container">
+                    <img src="assets/taegeuki.mid.jpg" alt="Taegeukgi Flag" class="flag">
+                    <div class="trigram-geon" data-label="Geon: Himmel"></div>
+                    <div class="trigram-gam" data-label="Gam: Vand"></div>
+                    <div class="trigram-ri" data-label="Ri: Ild"></div>
+                    <div class="trigram-gon" data-label="Gon: Jorden"></div>
+                </div>
+                
+                
+                <!-- <img src="assets/taegeuki.mid.jpg" alt="flag" class="flag">
+
+                <div class="infographic-details">
+                    <p><strong>Den hvide baggrund:</strong> Purity</p>
+                    <p><strong>Red & Blue Taegeuk:</strong> Positive & Negative Cosmic Forces</p>
+                    <p><strong>Black Bars:</strong> Movement & Harmony</p>
+                    <ul>
+                        <li><strong>☰ Geon:</strong> Sky</li>
+                        <li><strong>☵ Gam:</strong> Water</li>
+                        <li><strong>☲ Ri:</strong> Fire</li>
+                        <li><strong>☷ Gon:</strong> Earth</li>
+                    </ul>
+                </div> -->
+
+                
+            </div>
+        </div>
+        `
     }
 
     function showPattern(pattern) {
@@ -90,11 +143,6 @@
                         <div style="display: inline-block;">${pattern.name}</div> 
                     </div>
                 </h3>
-              
-                
-                
-
-                    
                 <div class="p5tb">${pattern.steps.length} tællinger </div>
                 <button class="cta-button" id="TEST_BUTTON">Test din viden</button>
 
@@ -384,7 +432,7 @@
                 </div>
 
                 <div class="pensum-content">
-                    <h5 class="pensum-section-head">Baggrund <span class="h5-minor">(Historie og symbolikker)</span></h5>
+                    <h5 class="pensum-section-head">Baggrund <span class="h5-minor">(Historie og andet skrammel)</span></h5>
                     
                     <div class="content-emoji strong">
                         <div class="emo-symbols">
@@ -405,14 +453,16 @@
                             </div>
                         </div>
 
-                        <div class="grid-column">
-                            <div class="p8tb">Flaget</div>
-                        </div>
-                        <div class="grid-column">
-                            <div>
-                                
+                        <button id="FLAG_INFO" class="grid-button"> 
+                            <div class="grid-column">
+                                <div class="p8tb">Flaget</div>
                             </div>
-                        </div>
+                            <div class="grid-column">
+                                <div>
+                                    
+                                </div>
+                            </div>
+                        </button>
                                       
                         <div class="grid-column">
                             <div class="p8tb">Gwe'erne</div>
@@ -472,82 +522,82 @@
 
     
     
-    function renderGweButton (pattern) {
-        if (pattern.number < 9) {
-            return /*html*/`
-                <div>
-                    <button id="GWE_INFO" class="info_button" info-text="${pattern.gwe.name}">
-                        ${pattern.gwe.emoji}
-                    </button>
-                </div>`
-        }
-        return ''
-    }
+    // function renderGweButton (pattern) {
+    //     if (pattern.number < 9) {
+    //         return /*html*/`
+    //             <div>
+    //                 <button id="GWE_INFO" class="info_button" info-text="${pattern.gwe.name}">
+    //                     ${pattern.gwe.emoji}
+    //                 </button>
+    //             </div>`
+    //     }
+    //     return ''
+    // }
 
-    function registerListeners(pattern) {
+    // function registerListeners(pattern) {
 
-        var latestFormButton = document.getElementById("LATEST_FORM");
+    //     var latestFormButton = document.getElementById("LATEST_FORM");
 
-        latestFormButton.addEventListener("click", () => {
-            showLatestForm(pattern)
-        })
-
-    
-    }
+    //     latestFormButton.addEventListener("click", () => {
+    //         showLatestForm(pattern)
+    //     })
 
     
-    function showGweInfo (pattern) {
-        var modal = document.getElementById("MODAL");
-        modal.classList.remove('hidden');
-        modal.innerHTML = /*html*/`
+    // }
 
-        <div class="modal-container">
-            <div class="modal_content">
-                <button id="CLOSE_MODAL" class="close_btn">✖</button>
-                <div>
-                    <h1 class="gwe_info">${pattern.gwe.emoji}</h1>
-                </div>
-                <div>
-                    <h2>${pattern.gwe.name}</h2>
-                    <p>${pattern.gwe.description}</p>
-                </div>
-            </div>
-        </div>`
-        registerCloseModalListener(modal);
-    }
+    
+    // function showGweInfo (pattern) {
+    //     var modal = document.getElementById("MODAL");
+    //     modal.classList.remove('hidden');
+    //     modal.innerHTML = /*html*/`
 
-    function showPhysicalInfo (pattern) {
-        var modal = document.getElementById("MODAL");
-        modal.classList.remove('hidden');
-        modal.innerHTML = /*html*/`
+    //     <div class="modal-container">
+    //         <div class="modal_content">
+    //             <button id="CLOSE_MODAL" class="close_btn">✖</button>
+    //             <div>
+    //                 <h1 class="gwe_info">${pattern.gwe.emoji}</h1>
+    //             </div>
+    //             <div>
+    //                 <h2>${pattern.gwe.name}</h2>
+    //                 <p>${pattern.gwe.description}</p>
+    //             </div>
+    //         </div>
+    //     </div>`
+    //     registerCloseModalListener(modal);
+    // }
 
-        <div class="modal-container">
-            <div class="modal_content">
-                <button id="CLOSE_MODAL" class="close_btn">✖</button>
-                <div class="inner-content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Handlinger</th>
-                                <th>Antal</th>
-                                <th>Tid</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        ${pattern.physicalTest.actions.map((item, index) => /*html*/`
-                            <tr>
-                                <td>${item.name}</td>
-                                <td>${item.count}</td>
-                                ${index === 0 ? `<td rowspan="${pattern.physicalTest.actions.length}">${pattern.physicalTest.timeSeconds / 60} minutter</td>` : ''}
-                            </tr>
-                        `).join('')}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>`
-        registerCloseModalListener(modal);
-    }
+    // function showPhysicalInfo (pattern) {
+    //     var modal = document.getElementById("MODAL");
+    //     modal.classList.remove('hidden');
+    //     modal.innerHTML = /*html*/`
+
+    //     <div class="modal-container">
+    //         <div class="modal_content">
+    //             <button id="CLOSE_MODAL" class="close_btn">✖</button>
+    //             <div class="inner-content">
+    //                 <table>
+    //                     <thead>
+    //                         <tr>
+    //                             <th>Handlinger</th>
+    //                             <th>Antal</th>
+    //                             <th>Tid</th>
+    //                         </tr>
+    //                     </thead>
+    //                     <tbody>
+    //                     ${pattern.physicalTest.actions.map((item, index) => /*html*/`
+    //                         <tr>
+    //                             <td>${item.name}</td>
+    //                             <td>${item.count}</td>
+    //                             ${index === 0 ? `<td rowspan="${pattern.physicalTest.actions.length}">${pattern.physicalTest.timeSeconds / 60} minutter</td>` : ''}
+    //                         </tr>
+    //                     `).join('')}
+    //                     </tbody>
+    //                 </table>
+    //             </div>
+    //         </div>
+    //     </div>`
+    //     registerCloseModalListener(modal);
+    // }
 
     function showARandomQuestion(pattern){
         var randomStepIndex = Math.round(Math.random() * pattern.steps.length);

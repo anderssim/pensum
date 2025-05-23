@@ -46,7 +46,7 @@ const Analogies = (() => {
             "gwe": {
                 "name": "Jin",
                 "number": 4,
-                "emoji": "☵",
+                "emoji": "☳",
                 "element": "🌩️",
                 "primary": "Torden",
                 // "secondary": "Bevægelse",
@@ -59,7 +59,7 @@ const Analogies = (() => {
             "gwe": {
                 "name": "Seon",
                 "number": 5,
-                "emoji": "☶",
+                "emoji": "☴",
                 "element": "🌬️ 🌪️",
                 "primary": "Vind",
                 // "secondary": "Bevægelse",
@@ -72,7 +72,7 @@ const Analogies = (() => {
             "gwe": {
                 "name": "Gam",
                 "number": 6,
-                "emoji": "☴",
+                "emoji": "☵",
                 "element": "💧",
                 "primary": "Vand",
                 // "secondary": "Bevægelse",
@@ -85,7 +85,7 @@ const Analogies = (() => {
             "gwe": {
                 "name": "Gan",
                 "number": 7,
-                "emoji": "☷",
+                "emoji": "☶",
                 "element": "⛰️",
                 "primary": "Bjerg",
             },
@@ -96,8 +96,8 @@ const Analogies = (() => {
         return {
             "gwe": {
                 "name": "Gon",
-                 "number": 8,
-                "emoji": "☳",
+                "number": 8,
+                "emoji": "☷",
                 "element": "⛰️",
                 "primary": "Jorden",
             },
